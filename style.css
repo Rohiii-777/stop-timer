@@ -1,0 +1,113 @@
+/* Setting the background color of the body element */
+body {
+  background-color: #f8f4f4;
+  background-image: linear-gradient(to right , #40494f, #D1F2EB);
+
+}
+
+/* Styling the main title */
+.maintitle {
+  font-size: 2.5em;
+  font-family: "Lucida Console", Monaco, monospace;
+  font-weight: bold;
+  color: #101010;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Styling the stopwatch display */
+#time {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+#time span {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 3rem;
+  text-align: center;
+  width: 80px;
+}
+
+.digit {
+  display: block;
+  font-size: inherit;
+  line-height: 1;
+  color: #0c0c0c;
+}
+
+.txt {
+  font-size: 0.8em;
+  opacity: 0.7;
+}
+
+/* Styling the buttons */
+.buttons {
+  background-color: #eddfdf;
+  color: #080808;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin-right: 10px;
+  background-image: linear-gradient(to top , #40494f, #D1F2EB);
+
+}
+
+.secondary {
+  color: #003333 !important;
+}
+
+.buttons:hover {
+  background-image: linear-gradient(to right , #40494f, #D1F2EB);
+}
+
+/* Styling the table of lap records */
+#record-table {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+#record-table th,
+#record-table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+#record-table th {
+  background-image: linear-gradient(to bottom , #40494f, #D1F2EB);
+  font-weight: bold;
+}
+
+#record-table tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Styling the today's date */
+.todayDate {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.todayDate h3 {
+  color: #160202;
+  font-size: 20px;
+  font-family: "Lucida Console", Monaco, monospace;
+}
+
+.btn-content{
+  display: flex;
+  justify-content: center;
+}
+
+a{
+  text-decoration: none;
+  color: #0f0e0e;
+}

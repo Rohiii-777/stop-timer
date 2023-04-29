@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Stop Watch</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+  <!-- FontAwesome CDN-->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+  <link href="style.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+  <nav >
+ <div class="maintitle">
+    <span>Stop Watch</span>
+      <span> <a 
+          href="\timer.html"> Timer</a>
+    </span>
+</div>
+  </nav>
+
+    <div id="container">
+        <div id="time">
+          <span>
+            <span class="digit" id="hr">00</span>
+            <span class="txt">Hr</span>
+          </span>
+          <span>
+            <span class="digit" id="min">00</span>
+            <span class="txt">Min</span>
+          </span>
+          <span>
+            <span class="digit" id="sec">00</span>
+            <span class="txt">Sec</span>
+          </span>
+          <span>
+            <span class="digit" id="count">00</span>
+            <span class="txt">Ms</span>
+          </span>
+        </div>
+        <span class="todayDate">
+          <h3><span id="d1"></span></h3>
+        </span>
+      </div>
+
+      <hr />
+
+      <div class="btn-content" id="btn-container">
+        <button class="buttons" id="start" onclick="start()">
+          <i class="fas fa-play-circle"></i> Start
+        </button>
+        <!--   <button class="btn" id="stop" onclick="stop()">Stop</button> -->
+        <button class="buttons" id="reset" onclick="reset()">
+          <i class="fas fa-undo"></i> Reset
+        </button>
+        <button class="buttons" id="lap" onclick="lap()">
+          <i class="fas fa-stopwatch"></i> Lap
+        </button>
+        <button class="buttons" id="clearlap" onclick="clearLap()">
+          <i class="fas fa-trash"></i> Clear Lap
+        </button>
+      </div>
+
+      <div>
+        <div id="record-container">
+          <table id="record-table">
+            <tr>
+              <th>Lap Number</th>
+              <th>Time</th>
+              <th>Diff</th>
+            </tr>
+            <tbody id="record-table-body"></tbody>
+          </table>
+        </div>
+      </div>
+      <hr />
+      
+   
+
+  <script type="text/javascript">
+    // start or stop stopwatch using "spacebar" key
+    document.addEventListener("keyup", (event) => {
+      if (event.code === "Space") {
+        start();
+      }
+    });
+    document.addEventListener("keyup", (event) => {
+      if (event.code === "Backspace") {
+        reset();
+      }
+    });
+    document.addEventListener("keyup", (event) => {
+      if (event.code === "Enter") {
+        lap();
+      }
+    });
+
+    document.addEventListener("keyup", (event) => {
+      if (event.code === "Numpad0") {
+        clearLap();
+      }
+    });
+  </script>
+     
+    
+  <script src="script.js"></script>
+</body>
+
+</html>
